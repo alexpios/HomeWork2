@@ -53,9 +53,15 @@
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nB9-eB-8cg">
                                 <rect key="frame" x="136.33333333333337" y="275" width="224.66666666666663" height="32.333333333333314"/>
+                                <connections>
+                                    <action selector="greenChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="PGl-yN-09f"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c4X-8e-0by">
                                 <rect key="frame" x="136.66666666666666" y="322.33333333333331" width="223.99999999999997" height="18.666666666666686"/>
+                                <connections>
+                                    <action selector="blueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="mJ2-Kf-zQM"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuL-gI-miN">
                                 <rect key="frame" x="73.333333333333329" y="277" width="36.333333333333329" height="27.333333333333314"/>
@@ -123,7 +129,7 @@
                     </view>
                     <connections>
                         <outlet property="blueNumber" destination="B1L-Kc-Rqw" id="MQ6-gQ-Szh"/>
-                        <outlet property="greenNumber" destination="B1L-Kc-Rqw" id="xYM-BN-Qli"/>
+                        <outlet property="greenNumber" destination="SuL-gI-miN" id="8bM-yB-Wp0"/>
                         <outlet property="redNumber" destination="w5m-3s-Afl" id="G0W-5I-CCH"/>
                         <outlet property="sliderBlue" destination="c4X-8e-0by" id="GDn-z6-bwT"/>
                         <outlet property="sliderGreen" destination="nB9-eB-8cg" id="hel-MI-hPt"/>

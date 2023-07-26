@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  HomeWork2
-//
-//  Created by Alex on 24.07.23.
-//
 
 import UIKit
 
@@ -39,8 +33,30 @@ class ViewController: UIViewController {
 
     @IBAction func redChange(_ sender: Any) {
         redNumber.text = String(Int(sliderRed.value))
+        colorSet(red: getColor().r, green: getColor().g, blue: getColor().b)
+    }
+    
+    @IBAction func greenChange(_ sender: Any) {
+        greenNumber.text = String(Int(sliderGreen.value))
+        colorSet(red: getColor().r, green: getColor().g, blue: getColor().b)
+    }
+    
+    @IBAction func blueChange(_ sender: Any) {
+        blueNumber.text = String(Int(sliderBlue.value))
+        colorSet(red: getColor().r, green: getColor().g, blue: getColor().b)
+
+    }
+    
+    func getColor() -> (r: Int, g: Int, b : Int){
+        
+        return (Int(sliderRed.value), Int(sliderGreen.value),  Int(sliderBlue.value))
         
     }
     
+    func colorSet(red: Int, green: Int, blue: Int)  {
+        viewColor.backgroundColor = UIColor(red: CGFloat(red)/255, green: CGFloat(green)/255, blue: CGFloat(blue)/255, alpha: 1)
+    }
+    
+   
 }
 
